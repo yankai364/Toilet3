@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <base href="./">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
+    <meta name="author" content="Łukasz Holeczek">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <title>Management Dashboard</title>
+    <!-- Icons-->
+    <link href="node_modules/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+    <link href="node_modules/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="node_modules/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <!-- Main styles for this application-->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/chart.css" rel="stylesheet">
+    <link href="css/icon.css" rel="stylesheet">
+    <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics-->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        // Shared ID
+        gtag('config', 'UA-118965717-3');
+        // Bootstrap ID
+        gtag('config', 'UA-118965717-5');
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		function onClick2Hourly() {
+			var a = document.getElementById("2hourly");
+			var b = document.getElementById("24hourly");
+			a.className = "btn btn-outline-secondary active";
+			b.className = "btn btn-outline-secondary";
+            document.getElementById("24hourchartdiv").className = "hidden";
+            document.getElementById("2hourchartdiv").className = "";
+		}
+		
+		function onClick24Hourly() {
+			var a = document.getElementById("2hourly");
+			var b = document.getElementById("24hourly");
+			a.className = "btn btn-outline-secondary";
+			b.className = "btn btn-outline-secondary active";
+			document.getElementById("2hourchartdiv").className = "hidden";
+			document.getElementById("24hourchartdiv").className = "";
+		}
+	</script>
+</head>
+
+<body class="app header-fixed" onload=onClick24Hourly()>
+    <header class="app-header navbar">
+        <a class="navbar-brand" href="#">
+            <img class="navbar-brand-full" src="img/brand/toiletLogo.jpg" height="50" alt="CoreUI Logo">
+            <img class="navbar-brand-minimized" src="img/brand/sygnet.svg" width="30" height="30" alt="CoreUI Logo">
+        </a>
+    </header>
+
+    <div class="app-body">
+        <div class="sidebar">
+            <nav class="sidebar-nav">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="nav-icon icon-speedometer"></i> Management Dashboard
+                            <span class="badge badge-primary">NEW</span>
+                        </a>
+                    </li>
+                    <li class="nav-title">Theme</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="colors.html">
+                            <i class="nav-icon icon-drop"></i> Colors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="typography.html">
+                            <i class="nav-icon icon-pencil"></i> Typography</a>
+                    </li>
+                    <li class="nav-title">Components</li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#">
+                            <i class="nav-icon icon-puzzle"></i> Base</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="base/breadcrumb.html">
+                                    <i class="nav-icon icon-puzzle"></i> Breadcrumb</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="base/cards.html">
+                                    <i class="nav-icon icon-puzzle"></i> Cards</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="base/carousel.html">
+                                    <i class="nav-icon icon-puzzle"></i> Carousel</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="base/collapse.html">
+                                    <i class="nav-icon icon-puzzle"></i> Collapse</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="base/forms.html">
+                                    <i class="nav-icon icon-puzzle"></i> Forms</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="base/jumbotron.html">
+                                    <i class="nav-icon icon-puzzle"></i> Jumbotron</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="base/list-group.html">
+                                    <i class="nav-icon icon-puzzle"></i> List group</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="base/navs.html">
+                                    <i class="nav-icon icon-puzzle"></i> Navs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="base/pagination.html">
+                                    <i class="nav-icon icon-puzzle"></i> Pagination</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="base/popovers.html">
+                                    <i class="nav-icon icon-puzzle"></i> Popovers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="base/progress.html">
+                                    <i class="nav-icon icon-puzzle"></i> Progress</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="base/scrollspy.html">
+                                    <i class="nav-icon icon-puzzle"></i> Scrollspy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="base/switches.html">
+                                    <i class="nav-icon icon-puzzle"></i> Switches</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="base/tables.html">
+                                    <i class="nav-icon icon-puzzle"></i> Tables</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="base/tabs.html">
+                                    <i class="nav-icon icon-puzzle"></i> Tabs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="base/tooltips.html">
+                                    <i class="nav-icon icon-puzzle"></i> Tooltips</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#">
+                            <i class="nav-icon icon-cursor"></i> Buttons</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="buttons/buttons.html">
+                                    <i class="nav-icon icon-cursor"></i> Buttons</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="buttons/button-group.html">
+                                    <i class="nav-icon icon-cursor"></i> Buttons Group</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="buttons/dropdowns.html">
+                                    <i class="nav-icon icon-cursor"></i> Dropdowns</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="buttons/brand-buttons.html">
+                                    <i class="nav-icon icon-cursor"></i> Brand Buttons</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="charts.html">
+                            <i class="nav-icon icon-pie-chart"></i> Charts</a>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#">
+                            <i class="nav-icon icon-star"></i> Icons</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="icons/coreui-icons.html">
+                                    <i class="nav-icon icon-star"></i> CoreUI Icons
+                                    <span class="badge badge-success">NEW</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="icons/flags.html">
+                                    <i class="nav-icon icon-star"></i> Flags</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="icons/font-awesome.html">
+                                    <i class="nav-icon icon-star"></i> Font Awesome
+                                    <span class="badge badge-secondary">4.7</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="icons/simple-line-icons.html">
+                                    <i class="nav-icon icon-star"></i> Simple Line Icons</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#">
+                            <i class="nav-icon icon-bell"></i> Notifications</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="notifications/alerts.html">
+                                    <i class="nav-icon icon-bell"></i> Alerts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="notifications/badge.html">
+                                    <i class="nav-icon icon-bell"></i> Badge</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="notifications/modals.html">
+                                    <i class="nav-icon icon-bell"></i> Modals</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="widgets.html">
+                            <i class="nav-icon icon-calculator"></i> Widgets
+                            <span class="badge badge-primary">NEW</span>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="nav-title">Extras</li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#">
+                            <i class="nav-icon icon-star"></i> Pages</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.html" target="_top">
+                                    <i class="nav-icon icon-star"></i> Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="register.html" target="_top">
+                                    <i class="nav-icon icon-star"></i> Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="404.html" target="_top">
+                                    <i class="nav-icon icon-star"></i> Error 404</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="500.html" target="_top">
+                                    <i class="nav-icon icon-star"></i> Error 500</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mt-auto">
+                        <a class="nav-link nav-link-success" href="https://coreui.io" target="_top">
+                            <i class="nav-icon icon-cloud-download"></i> Download CoreUI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-danger" href="https://coreui.io/pro/" target="_top">
+                            <i class="nav-icon icon-layers"></i> Try CoreUI
+                            <strong>PRO</strong>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+        </div>
+        <main class="main">
+            <!-- Breadcrumb-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active" >Management Dashboard</li>
+                <!-- Breadcrumb Menu-->
+                <li class="breadcrumb-menu d-md-down-none">
+                    <div class="btn-group" role="group" aria-label="Button group">
+                        <!--<a class="btn" href="#">-->
+                        <!--    <i class="icon-speech"></i>-->
+                        <!--</a>-->
+                        <!--<a class="btn" href="#">-->
+                        <!--    <i class="icon-graph"></i> Search</a>-->
+                        <!--<a class="btn" href="#">-->
+                        <!--    <i class="icon-settings"></i>  Settings</a>-->
+                    </div>
+                </li>
+            </ol>
+
+            <div class="container-fluid">
+                <div class="animated fadeIn">
+                    <!--<div class="row">-->
+
+                    <!--    <div class="col-sm-6 col-lg-3">-->
+                    <!--        <div class="card text-white bg-success" style="padding-bottom:20px;">-->
+                    <!--            <div class="card-body pb-0">-->
+                    <!--                <div class="text-value">15 Toilets</div>-->
+                    <!--                <div>Clean</div>-->
+                    <!--            </div>-->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                        <!-- /.col-->
+                    <!--    <div class="col-sm-6 col-lg-3">-->
+                    <!--        <div class="card text-white bg-warning" style="padding-bottom:20px;">-->
+                    <!--            <div class="card-body pb-0">-->
+                    <!--                <div class="text-value">2 Toilets</div>-->
+                    <!--                <div>Under Maintenance</div>-->
+                    <!--            </div>-->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                        <!-- /.col-->
+                    <!--    <div class="col-sm-6 col-lg-3">-->
+                    <!--        <div class="card text-white bg-danger" style="padding-bottom:20px;">-->
+                    <!--            <div class="card-body pb-0">-->
+                    <!--                <div class="text-value">3 Toilets</div>-->
+                    <!--                <div>Dirty</div>-->
+                    <!--            </div>-->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                        <!-- /.col-->
+                    <!--    <div class="col-sm-6 col-lg-3">-->
+                    <!--        <div class="card text-white bg-primary" style="padding-bottom:20px;">-->
+                    <!--            <div class="card-body pb-0">-->
+                    <!--                <div class="text-value">3 Cleaners</div>-->
+                    <!--                <div>On Duty Today</div>-->
+                    <!--            </div>-->
+                                <!--<div class="chart-wrapper mt-3" style="height:70px;">-->
+                                <!--    <canvas class="chart" id="card-chart3" height="70"></canvas>-->
+                                <!--</div>-->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                        <!-- /.col-->
+                    <!--</div>-->
+                    <!-- /.row-->
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h3 class="card-title mb-1" style="padding-top:20px; padding-left:20px;">Management Dashboard</h3>
+                                </div>
+                                <div class="col-sm-2">
+                                    <!--<select>-->
+                                    <!--    <option value="Plaza Singapura">Plaza Singapura</option>-->
+                                    <!--    <option value="Orchard Central">Orchard Central</option>-->
+                                    <!--    <option value="313 Somerset">313 Somerset</option>-->
+                                    <!--    <option value="Compass One">Compass One</option>-->
+                                    <!--</select>-->
+                                    Select Shopping Mall
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Plaza Singapura
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Orchard Central</a>
+                                            <a class="dropdown-item" href="#">313 Somerset</a>
+                                            <a class="dropdown-item" href="#">Compass One</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- /.col-->
+                                <div class="col-sm-1 d-none d-md-block" style="padding-top:20px">
+                                    <div class="btn-group btn-group-toggle float-right mr-3" data-toggle="buttons">
+                                        <label id="2hourly" class="btn btn-outline-secondary" onClick="onClick2Hourly()">
+                                            <input id="option1" type="radio" name="options" autocomplete="off"> 2-Hourly
+                                        </label>
+                                        <label id="24hourly" class="btn btn-outline-secondary active" onClick="onClick24Hourly()">
+                                            <input id="option2" type="radio" name="options" autocomplete="off">
+                                            Daily
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- /.col-->
+                            </div>
+                            <!-- /.row-->
+                            <div id="chartDisplay" style="padding-top:20px;">
+                            	<div id="2hourchartdiv" class="hidden">
+                            		<h3><center>Downtimes and Occupancy over Past 2 Hours </center></h3>
+				            		<div id="2hourchart" style="height: 390px;"></div>
+				            		<div class="row">
+				            			<div class="col-md-8 col-lg-8" align='left' id="treemap_chart2" style="width: 900px; height: 560px;"></div>
+				            			<div class="col-md-4 col-lg-4">
+				            				<table class="table table-responsive-sm table-bordered table-striped table-sm">
+						                      <thead>
+						                        <tr>
+						                          <th>Issue</th>
+						                          <th>Frequency Count</th>
+						                          <th>Average Response Time</th>
+						                        </tr>
+						                      </thead>
+						                      <tbody>
+						                        <tr>
+						                          <td>Low Soap Level</td>
+						                          <td><span id="soapCount2"></span></td>
+						                          <td><span id="soapAverageResponseDuration2"></span></td>
+						                        </tr>
+						                        <tr>
+						                          <td>Full Rubbish Bin</td>
+						                          <td><span id="rubbishCount2"></span></td>
+						                          <td><span id="rubbishAverageResponseDuration2"></span></td>
+						                        </tr>
+						                        <tr>
+						                          <td>Low Toilet Paper</td>
+						                          <td><span id="paperCount2"></span></td>
+						                          <td><span id="paperAverageResponseDuration2"></span></td>
+						                        </tr>
+						                        <tr>
+						                          <td>Foul Smell</td>
+						                          <td><span id="smellCount2"></span></td>
+						                          <td><span id="smellAverageResponseDuration2"></span></td>
+						                        </tr>
+						                        <tr>
+						                          <td>Wet Floor</td>
+						                          <td><span id="floorCount2"></span></td>
+						                          <td><span id="floorAverageResponseDuration2"></span></td>
+						                        </tr>
+						                      </tbody>
+						                    </table>
+						                    <table class="table table-responsive-sm table-bordered table-striped table-sm">
+						                    	<thead>
+						                        <tr>
+						                          <th>Cubicle #</th>
+						                          <th>Usage Count</th>
+						                        </tr>
+						                      </thead>
+						                      <tbody>
+						                        <tr>
+						                          <td>1</td>
+						                          <td><span id="cubicle1Count2"></span></td>
+						                        </tr>
+						                        <tr>
+						                          <td>2</td>
+						                          <td><span id="cubicle2Count2"></span></td>
+						                        </tr>
+						                        <tr>
+						                          <td>3</td>
+						                          <td><span id="cubicle3Count2"></span></td>
+						                        </tr>
+						                    	
+						                    </table>
+						                    <div class="col-sm-12 col-lg-12">
+					                            <div class="card text-white bg-dark" style="padding-bottom:20px;">
+					                                <div class="card-body pb-0">
+					                                    <div class="text-value">Overall toilet usage: <span id="cubicleAllCount2"></span></div>
+					                                </div>
+					                            </div>
+					                        </div>
+					                        <div class="col-sm-12 col-lg-12">
+					                            <div class="card text-white bg-dark" style="padding-bottom:20px;">
+					                                <div class="card-body pb-0">
+					                                    <div class="text-value">Total issues: <span id="totalIssueCount2"></span></div>
+					                                    <div>Average response time: <div id="overallAverageResponseDuration2"></div></div>
+				                                    </div>
+					                            </div>
+					                        </div>
+				            			</div>
+				            		</div>
+						            	<div class="row" style="padding-top:30px;">
+										
+										<!--<div class="col-sm-6 col-lg-3">-->
+				      <!--                      <div class="card text-white bg-dark" style="padding-bottom:20px;">-->
+				      <!--                          <div class="card-body pb-0">-->
+				      <!--                              <div class="text-value">Cubicle 1 usage: <span id="cubicle1Count"></span></div>-->
+				      <!--                          </div>-->
+				      <!--                      </div>-->
+				      <!--                  </div>-->
+				      <!--                  <div class="col-sm-6 col-lg-3">-->
+				      <!--                      <div class="card text-white bg-dark" style="padding-bottom:20px;">-->
+				      <!--                          <div class="card-body pb-0">-->
+				      <!--                              <div class="text-value">Cubicle 2 usage: <span id="cubicle2Count"></span></div>-->
+				      <!--                          </div>-->
+				      <!--                      </div>-->
+				      <!--                  </div>-->
+				      <!--                  <div class="col-sm-6 col-lg-3">-->
+				      <!--                      <div class="card text-white bg-dark" style="padding-bottom:20px;">-->
+				      <!--                          <div class="card-body pb-0">-->
+				      <!--                              <div class="text-value">Cubicle 3 usage: <span id="cubicle3Count"></span></div>-->
+				      <!--                          </div>-->
+				      <!--                      </div>-->
+				      <!--                  </div>-->
+										
+				                        <!--<div class="col-sm-6 col-lg-3">-->
+				                        <!--    <div class="card text-white bg-soap" style="padding-bottom:20px;">-->
+				                        <!--        <div class="card-body pb-0">-->
+				                        <!--            <div class="text-value">Low soap: <span id="soapCount"></span></div>-->
+				                        <!--            <div>Average response time: <div id="soapAverageResponseDuration"></div></div>-->
+				                        <!--        </div>-->
+				                        <!--    </div>-->
+				                        <!--</div>-->
+				                        <!--<div class="col-sm-6 col-lg-3">-->
+				                        <!--    <div class="card text-white bg-rubbish" style="padding-bottom:20px;">-->
+				                        <!--        <div class="card-body pb-0">-->
+				                        <!--            <div class="text-value">Full rubbish bin: <span id="rubbishCount"></span></div>-->
+				                        <!--            <div>Average response time: <div id="rubbishAverageResponseDuration"></div></div>-->
+				                        <!--        </div>-->
+				                        <!--    </div>-->
+				                        <!--</div>-->
+				                        <!--<div class="col-sm-6 col-lg-3">-->
+				                        <!--    <div class="card text-white bg-paper" style="padding-bottom:20px;">-->
+				                        <!--        <div class="card-body pb-0" style="display:inline">-->
+				                        <!--            <div class="text-value">Low toilet paper: <span id="paperCount"></span></div>-->
+				                        <!--            <div>Average response time: <div id="paperAverageResponseDuration"></div></div>-->
+				                        <!--            <div align="right">-->
+				                        <!--            	<img class='navbar-brand-full' src='img/toilet/issues/toiletpaper.png' height='40'>-->
+				                        <!--        	</div>-->
+				                        <!--        </div>-->
+				                        <!--    </div>-->
+				                            
+				                        <!--</div>-->
+				                        <!--<div class="col-sm-6 offset-lg-3 col-lg-3">-->
+				                        <!--    <div class="card text-white bg-smell" style="padding-bottom:20px;">-->
+				                        <!--        <div class="card-body pb-0">-->
+				                        <!--            <div class="text-value">Foul smell: <span id="smellCount"></span></div>-->
+				                        <!--            <div>Average response time: <div id="smellAverageResponseDuration"></div></div>-->
+				                        <!--        </div>-->
+				                        <!--    </div>-->
+				                        <!--</div>-->
+				                        <!--<div class="col-sm-6 col-lg-3">-->
+				                        <!--    <div class="card text-white bg-floor" style="padding-bottom:20px;">-->
+				                        <!--        <div class="card-body pb-0">-->
+				                        <!--            <div class="text-value">Wet floor: <span id="floorCount"></span></div>-->
+				                        <!--            <div>Average response time: <div id="floorAverageResponseDuration"></div></div>-->
+				                        <!--        </div>-->
+				                        <!--    </div>-->
+				                        <!--</div>-->
+									</div>
+		                        </div>
+                            	</div>
+                            	<div id="24hourchartdiv">
+                            		<h3><center>Downtimes and Occupancy over Past 24 Hours </center></h3>
+									<div id="24hourchart" style="height: 390px;"></div>
+									<div class="row">
+										<div class="col-lg-8">
+										<div id="treemap_chart24" style="width: 920px; height: 560px;"></div>
+									</div>
+									<div class="col-lg-4">
+										<table class="table table-responsive-sm table-bordered table-striped table-sm" style="padding-top:50px">
+					                      <thead>
+					                        <tr>
+					                          <th>Issue</th>
+					                          <th>Frequency Count</th>
+					                          <th>Average Response Time</th>
+					                        </tr>
+					                      </thead>
+					                      <tbody>
+					                        <tr>
+					                          <td>Low Soap Level</td>
+					                          <td><span id="soapCount24"></span></td>
+					                          <td><span id="soapAverageResponseDuration24"></span></td>
+					                        </tr>
+					                        <tr>
+					                          <td>Full Rubbish Bin</td>
+					                          <td><span id="rubbishCount24"></span></td>
+					                          <td><span id="rubbishAverageResponseDuration24"></span></td>
+					                        </tr>
+					                        <tr>
+					                          <td>Low Toilet Paper</td>
+					                          <td><span id="paperCount24"></span></td>
+					                          <td><span id="paperAverageResponseDuration24"></span></td>
+					                        </tr>
+					                        <tr>
+					                          <td>Foul Smell</td>
+					                          <td><span id="smellCount24"></span></td>
+					                          <td><span id="smellAverageResponseDuration24"></span></td>
+					                        </tr>
+					                        <tr>
+					                          <td>Wet Floor</td>
+					                          <td><span id="floorCount24"></span></td>
+					                          <td><span id="floorAverageResponseDuration24"></span></td>
+					                        </tr>
+					                      </tbody>
+					                    </table>
+					                    <table class="table table-responsive-sm table-bordered table-striped table-sm">
+					                    	<thead>
+					                        <tr>
+					                          <th>Cubicle #</th>
+					                          <th>Usage Count</th>
+					                        </tr>
+					                      </thead>
+					                      <tbody>
+					                        <tr>
+					                          <td>1</td>
+					                          <td><span id="cubicle1Count24"></span></td>
+					                        </tr>
+					                        <tr>
+					                          <td>2</td>
+					                          <td><span id="cubicle2Count24"></span></td>
+					                        </tr>
+					                        <tr>
+					                          <td>3</td>
+					                          <td><span id="cubicle3Count24"></span></td>
+					                        </tr>
+					                    	
+					                    </table>
+					                    <div class="col-sm-12 col-lg-12">
+				                            <div class="card text-white bg-dark" style="padding-bottom:20px;">
+				                                <div class="card-body pb-0">
+				                                    <div class="text-value">Overall toilet usage: <span id="cubicleAllCount24"></span></div>
+				                                </div>
+				                            </div>
+				                        </div>
+				                        <div class="col-sm-12 col-lg-12">
+				                            <div class="card text-white bg-dark" style="padding-bottom:20px;">
+				                                <div class="card-body pb-0">
+				                                    <div class="text-value">Total issues: <span id="totalIssueCount24"></span></div>
+				                                    <div>Average response time: <div id="overallAverageResponseDuration24"></div></div>
+			                                    </div>
+				                            </div>
+				                        </div>
+									</div>
+									<div class="row" style="padding-top:30px;">
+								
+								<!--<div class="col-sm-6 col-lg-3">-->
+		      <!--                      <div class="card text-white bg-dark" style="padding-bottom:20px;">-->
+		      <!--                          <div class="card-body pb-0">-->
+		      <!--                              <div class="text-value">Cubicle 1 usage: <span id="cubicle1Count"></span></div>-->
+		      <!--                          </div>-->
+		      <!--                      </div>-->
+		      <!--                  </div>-->
+		      <!--                  <div class="col-sm-6 col-lg-3">-->
+		      <!--                      <div class="card text-white bg-dark" style="padding-bottom:20px;">-->
+		      <!--                          <div class="card-body pb-0">-->
+		      <!--                              <div class="text-value">Cubicle 2 usage: <span id="cubicle2Count"></span></div>-->
+		      <!--                          </div>-->
+		      <!--                      </div>-->
+		      <!--                  </div>-->
+		      <!--                  <div class="col-sm-6 col-lg-3">-->
+		      <!--                      <div class="card text-white bg-dark" style="padding-bottom:20px;">-->
+		      <!--                          <div class="card-body pb-0">-->
+		      <!--                              <div class="text-value">Cubicle 3 usage: <span id="cubicle3Count"></span></div>-->
+		      <!--                          </div>-->
+		      <!--                      </div>-->
+		      <!--                  </div>-->
+								
+		                        <!--<div class="col-sm-6 col-lg-3">-->
+		                        <!--    <div class="card text-white bg-soap" style="padding-bottom:20px;">-->
+		                        <!--        <div class="card-body pb-0">-->
+		                        <!--            <div class="text-value">Low soap: <span id="soapCount"></span></div>-->
+		                        <!--            <div>Average response time: <div id="soapAverageResponseDuration"></div></div>-->
+		                        <!--        </div>-->
+		                        <!--    </div>-->
+		                        <!--</div>-->
+		                        <!--<div class="col-sm-6 col-lg-3">-->
+		                        <!--    <div class="card text-white bg-rubbish" style="padding-bottom:20px;">-->
+		                        <!--        <div class="card-body pb-0">-->
+		                        <!--            <div class="text-value">Full rubbish bin: <span id="rubbishCount"></span></div>-->
+		                        <!--            <div>Average response time: <div id="rubbishAverageResponseDuration"></div></div>-->
+		                        <!--        </div>-->
+		                        <!--    </div>-->
+		                        <!--</div>-->
+		                        <!--<div class="col-sm-6 col-lg-3">-->
+		                        <!--    <div class="card text-white bg-paper" style="padding-bottom:20px;">-->
+		                        <!--        <div class="card-body pb-0" style="display:inline">-->
+		                        <!--            <div class="text-value">Low toilet paper: <span id="paperCount"></span></div>-->
+		                        <!--            <div>Average response time: <div id="paperAverageResponseDuration"></div></div>-->
+		                        <!--            <div align="right">-->
+		                        <!--            	<img class='navbar-brand-full' src='img/toilet/issues/toiletpaper.png' height='40'>-->
+		                        <!--        	</div>-->
+		                        <!--        </div>-->
+		                        <!--    </div>-->
+		                            
+		                        <!--</div>-->
+		                        <!--<div class="col-sm-6 offset-lg-3 col-lg-3">-->
+		                        <!--    <div class="card text-white bg-smell" style="padding-bottom:20px;">-->
+		                        <!--        <div class="card-body pb-0">-->
+		                        <!--            <div class="text-value">Foul smell: <span id="smellCount"></span></div>-->
+		                        <!--            <div>Average response time: <div id="smellAverageResponseDuration"></div></div>-->
+		                        <!--        </div>-->
+		                        <!--    </div>-->
+		                        <!--</div>-->
+		                        <!--<div class="col-sm-6 col-lg-3">-->
+		                        <!--    <div class="card text-white bg-floor" style="padding-bottom:20px;">-->
+		                        <!--        <div class="card-body pb-0">-->
+		                        <!--            <div class="text-value">Wet floor: <span id="floorCount"></span></div>-->
+		                        <!--            <div>Average response time: <div id="floorAverageResponseDuration"></div></div>-->
+		                        <!--        </div>-->
+		                        <!--    </div>-->
+		                        <!--</div>-->
+							</div>
+                        </div>
+                            	</div>
+                            </div>
+
+                        <div class="card-footer">
+                            <div class="row text-center">
+                                <div class="col-sm-12 col-md mb-sm-2 mb-0">
+                                    <div class="text-muted">Average Satisfaction Rating</div>
+                                    <strong>80%</strong>
+                                    <div class="progress progress-xs mt-2">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%"
+                                            aria-valuenow="80%" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md mb-sm-2 mb-0">
+                                    <div class="text-muted">Clean Toilets</div>
+                                    <strong>15</strong>
+                                    <div class="progress progress-xs mt-2">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 84%"
+                                            aria-valuenow="84" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md mb-sm-2 mb-0">
+                                    <div class="text-muted">Toilets under Maintenance</div>
+                                    <strong>2</strong>
+                                    <div class="progress progress-xs mt-2">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 6%"
+                                            aria-valuenow="6" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md mb-sm-2 mb-0">
+                                    <div class="text-muted">Dirty Toilets</div>
+                                    <strong>3</strong>
+                                    <div class="progress progress-xs mt-2">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 10%"
+                                            aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md mb-sm-2 mb-0">
+                                    <div class="text-muted"># of Cleaners on Duty</div>
+                                    <strong>5</strong>
+                                    <div class="progress progress-xs mt-2">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 20%"
+                                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header"><b>Janitor Ranking</b></div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <table class="table table-responsive-sm table-hover table-outline mb-0">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th class="text-right">
+                                                    <i class="icon-people"></i>
+                                                </th>
+                                                <th>Janitor</th>
+                                                <th class="text-left">Attached to:</th>
+                                                <th>Janitor Rating</th>
+                                                <th class="text-center">On Duty?</th>
+                                                <th>Last Cleaned</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="janitorData"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    			</div>
+    		</div>
+    		
+    <footer class="app-footer">
+        <div>
+            <a href="https://coreui.io">CoreUI</a>
+            <span>&copy; 2018 creativeLabs.</span>
+        </div>
+        <div class="ml-auto">
+            <span>Powered by</span>
+            <a href="https://coreui.io">CoreUI</a>
+        </div>
+    </footer>
+    <!-- CoreUI and necessary plugins-->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/pace-progress/pace.min.js"></script>
+    <script src="node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+    <script src="node_modules/@coreui/coreui/dist/js/coreui.min.js"></script>
+    <!-- Plugins and scripts required by this view-->
+    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+    <script src="node_modules/@coreui/coreui-plugin-chartjs-custom-tooltips/dist/js/custom-tooltips.min.js"></script>
+    <script src="js/main.js"></script>
+	<script src="js/downtimechart.js"></script>
+</body>
+</html>>
