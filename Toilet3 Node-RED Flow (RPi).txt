@@ -1,0 +1,752 @@
+[
+    {
+        "id": "df374cad.be25b",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "131e8518.acf41b",
+        "type": "tls-config",
+        "z": "",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "RaspberryPi3-device_certificate.pem",
+        "keyname": "RaspberryPi3-device_certificate_priv.pem",
+        "caname": "RaspberryPi3-device_certificate.p12",
+        "servername": "",
+        "verifyservercert": false
+    },
+    {
+        "id": "c99e4ad3.052098",
+        "type": "serial-port",
+        "z": "",
+        "serialport": "/dev/ttyACM0",
+        "serialbaud": "57600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": false,
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "36dba0f3.053b",
+        "type": "serial-port",
+        "z": "",
+        "serialport": "/dev/ttyAMA0",
+        "serialbaud": "57600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": false,
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "4661c639.a32668",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "",
+        "broker": "broker.mqttdashboard.com",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "4a3b75ac.a8e1ec",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "",
+        "broker": "broker.mqttdashboard.com",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "d34e4774.6b79f8",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "",
+        "broker": "broker.mqttdashboard.com",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "5ce997d0.fb2048",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "",
+        "broker": "broker.mqttdashboard.com",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "e6281c2f.acd6e",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "",
+        "broker": "broker.mqttdashboard.com",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "f111f344.a2d43",
+        "type": "rpi-gpio in",
+        "z": "df374cad.be25b",
+        "name": "",
+        "pin": "40",
+        "intype": "tri",
+        "debounce": "1000",
+        "read": true,
+        "x": 170,
+        "y": 440,
+        "wires": [
+            [
+                "ff9deae1.e417d8",
+                "f028b2d2.046e2"
+            ]
+        ]
+    },
+    {
+        "id": "62ec7114.e4516",
+        "type": "rpi-gpio in",
+        "z": "df374cad.be25b",
+        "name": "",
+        "pin": "38",
+        "intype": "tri",
+        "debounce": "1000",
+        "read": true,
+        "x": 170,
+        "y": 360,
+        "wires": [
+            [
+                "2fe7772d.706c78"
+            ]
+        ]
+    },
+    {
+        "id": "13dab351.e5f80d",
+        "type": "rpi-gpio in",
+        "z": "df374cad.be25b",
+        "name": "",
+        "pin": "36",
+        "intype": "tri",
+        "debounce": "1000",
+        "read": true,
+        "x": 170,
+        "y": 280,
+        "wires": [
+            [
+                "9df4f0e1.1494c"
+            ]
+        ]
+    },
+    {
+        "id": "9df4f0e1.1494c",
+        "type": "function",
+        "z": "df374cad.be25b",
+        "name": "Water Level",
+        "func": "node.warn(\"water level: \" + msg.payload)\nvalue = parseInt(msg.payload)\nmsg.headers = {}\nmsg.headers = {\"Content-Type\": \"application/json\"}\nmsg.payload = {}\nmsg.payload = { \n\t\"capabilityAlternateId\": \"92e3a1dad4c59180\", \n\t\"sensorAlternateId\": \"1f0ee7fb6ca8835b\", \n\t\"measures\": [{\"level\": value}] \n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 510,
+        "y": 280,
+        "wires": [
+            [
+                "f3e57f1c.d00ac"
+            ]
+        ]
+    },
+    {
+        "id": "2fe7772d.706c78",
+        "type": "function",
+        "z": "df374cad.be25b",
+        "name": "Proximity 1 Toilet Paper",
+        "func": "node.warn(\"Proximity 1: \" + msg.payload)\nvalue = parseInt(msg.payload)\nmsg.headers = {}\nmsg.headers = {\"Content-Type\": \"application/json\"}\nmsg.payload = {}\nmsg.payload = { \n\t\"capabilityAlternateId\": \"4e8b89660a9f2b50\", \n\t\"sensorAlternateId\": \"81e47aaada06d157\", \n\t\"measures\": [{\"Availability\": value}] \n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 550,
+        "y": 360,
+        "wires": [
+            [
+                "c9da8509.a9d648"
+            ]
+        ]
+    },
+    {
+        "id": "ff9deae1.e417d8",
+        "type": "function",
+        "z": "df374cad.be25b",
+        "name": "Floor water level",
+        "func": "node.warn(\"Floor water level: \" + msg.payload)\nvalue = parseInt(msg.payload)\nmsg.headers = {}\nmsg.headers = {\"Content-Type\": \"application/json\"}\nmsg.payload = {}\nmsg.payload = { \n\t\"capabilityAlternateId\": \"50e228c39f8e8362\", \n\t\"sensorAlternateId\": \"fe9849b32b3257a1\", \n\t\"measures\": [{\"WaterLevel\": value}] \n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 520,
+        "y": 440,
+        "wires": [
+            [
+                "5f65a7f9.3c8c08"
+            ]
+        ]
+    },
+    {
+        "id": "9d163c66.b21e5",
+        "type": "rpi-gpio in",
+        "z": "df374cad.be25b",
+        "name": "",
+        "pin": "33",
+        "intype": "tri",
+        "debounce": "1000",
+        "read": true,
+        "x": 170,
+        "y": 200,
+        "wires": [
+            [
+                "8f94b99f.11fb88"
+            ]
+        ]
+    },
+    {
+        "id": "8f94b99f.11fb88",
+        "type": "function",
+        "z": "df374cad.be25b",
+        "name": "Proximity 2 Rubbish",
+        "func": "node.warn(\"proximity 2 level: \" + msg.payload)\nvalue = parseInt(msg.payload)\nmsg.headers = {}\nmsg.headers = {\"Content-Type\": \"application/json\"}\nmsg.payload = {}\nmsg.payload = { \n\t\"capabilityAlternateId\": \"757f101eeb3fb0e5\", \n\t\"sensorAlternateId\": \"e9b489274dbc38a0\", \n\t\"measures\": [{\"RubbishLevel\": value}] \n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 540,
+        "y": 200,
+        "wires": [
+            [
+                "1ac00440.49a55c"
+            ]
+        ]
+    },
+    {
+        "id": "e40a53df.1bcc5",
+        "type": "rpi-gpio in",
+        "z": "df374cad.be25b",
+        "name": "",
+        "pin": "31",
+        "intype": "tri",
+        "debounce": "1000",
+        "read": true,
+        "x": 170,
+        "y": 120,
+        "wires": [
+            [
+                "c012eaa5.925bf8"
+            ]
+        ]
+    },
+    {
+        "id": "c012eaa5.925bf8",
+        "type": "function",
+        "z": "df374cad.be25b",
+        "name": "Air Quality",
+        "func": "node.warn(\"air quality level: \" + msg.payload)\nvalue = parseInt(msg.payload)\nmsg.headers = {}\nmsg.headers = {\"Content-Type\": \"application/json\"}\nmsg.payload = {}\nmsg.payload = { \n\t\"capabilityAlternateId\": \"6eee199751d481aa\", \n\t\"sensorAlternateId\": \"b0c6ccbb1ab49394\", \n\t\"measures\": [{\"QualityLevel\": value}] \n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 510,
+        "y": 120,
+        "wires": [
+            [
+                "163c1be5.683c34"
+            ]
+        ]
+    },
+    {
+        "id": "75def8dd.2cb368",
+        "type": "rpi-gpio in",
+        "z": "df374cad.be25b",
+        "name": "",
+        "pin": "35",
+        "intype": "down",
+        "debounce": "200",
+        "read": true,
+        "x": 180,
+        "y": 520,
+        "wires": [
+            [
+                "e246ce54.5fba2"
+            ]
+        ]
+    },
+    {
+        "id": "1ac00440.49a55c",
+        "type": "http request",
+        "z": "df374cad.be25b",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "url": "https://6493976d-0b5e-4d5a-90c6-e3893adcc64a.us10.cp.iot.sap/iot/gateway/rest/measures/2befc75bdfc1ed5f",
+        "tls": "131e8518.acf41b",
+        "x": 790,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5f65a7f9.3c8c08",
+        "type": "http request",
+        "z": "df374cad.be25b",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "url": "https://6493976d-0b5e-4d5a-90c6-e3893adcc64a.us10.cp.iot.sap/iot/gateway/rest/measures/2befc75bdfc1ed5f",
+        "tls": "131e8518.acf41b",
+        "x": 690,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c9da8509.a9d648",
+        "type": "http request",
+        "z": "df374cad.be25b",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "url": "https://6493976d-0b5e-4d5a-90c6-e3893adcc64a.us10.cp.iot.sap/iot/gateway/rest/measures/2befc75bdfc1ed5f",
+        "tls": "131e8518.acf41b",
+        "x": 770,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f3e57f1c.d00ac",
+        "type": "http request",
+        "z": "df374cad.be25b",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "url": "https://6493976d-0b5e-4d5a-90c6-e3893adcc64a.us10.cp.iot.sap/iot/gateway/rest/measures/2befc75bdfc1ed5f",
+        "tls": "131e8518.acf41b",
+        "x": 690,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "163c1be5.683c34",
+        "type": "http request",
+        "z": "df374cad.be25b",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "url": "https://6493976d-0b5e-4d5a-90c6-e3893adcc64a.us10.cp.iot.sap/iot/gateway/rest/measures/2befc75bdfc1ed5f",
+        "tls": "131e8518.acf41b",
+        "x": 690,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9e3900eb.56f76",
+        "type": "http request",
+        "z": "df374cad.be25b",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "url": "https://6493976d-0b5e-4d5a-90c6-e3893adcc64a.us10.cp.iot.sap/iot/gateway/rest/measures/2befc75bdfc1ed5f",
+        "tls": "131e8518.acf41b",
+        "x": 690,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e246ce54.5fba2",
+        "type": "function",
+        "z": "df374cad.be25b",
+        "name": "Switch 1",
+        "func": "node.warn(\"Switch: \" + msg.payload)\nvalue = parseInt(msg.payload)\nmsg.headers = {}\nmsg.headers = {\"Content-Type\": \"application/json\"}\nmsg.payload = {}\nmsg.payload = { \n\t\"capabilityAlternateId\": \"eac1392e84ec6fd0\", \n\t\"sensorAlternateId\": \"0:0:0:0\", \n\t\"measures\": [{\"Switch\": value}] \n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 500,
+        "y": 520,
+        "wires": [
+            [
+                "9e3900eb.56f76"
+            ]
+        ]
+    },
+    {
+        "id": "ac0f0efd.5b437",
+        "type": "rpi-gpio in",
+        "z": "df374cad.be25b",
+        "name": "",
+        "pin": "37",
+        "intype": "down",
+        "debounce": "200",
+        "read": true,
+        "x": 180,
+        "y": 580,
+        "wires": [
+            [
+                "69dfbb8.3f6b544"
+            ]
+        ]
+    },
+    {
+        "id": "6a125eac.1322f",
+        "type": "http request",
+        "z": "df374cad.be25b",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "url": "https://6493976d-0b5e-4d5a-90c6-e3893adcc64a.us10.cp.iot.sap/iot/gateway/rest/measures/2befc75bdfc1ed5f",
+        "tls": "131e8518.acf41b",
+        "x": 690,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "69dfbb8.3f6b544",
+        "type": "function",
+        "z": "df374cad.be25b",
+        "name": "Switch 2",
+        "func": "node.warn(\"Switch2: \" + msg.payload)\nvalue = parseInt(msg.payload)\nmsg.headers = {}\nmsg.headers = {\"Content-Type\": \"application/json\"}\nmsg.payload = {}\nmsg.payload = { \n\t\"capabilityAlternateId\": \"90cd2c2d57f5a6fb\", \n\t\"sensorAlternateId\": \"93bc69172a05bea9\", \n\t\"measures\": [{\"Switch2\": value}] \n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 500,
+        "y": 580,
+        "wires": [
+            [
+                "6a125eac.1322f"
+            ]
+        ]
+    },
+    {
+        "id": "46299cf9.005754",
+        "type": "rpi-gpio in",
+        "z": "df374cad.be25b",
+        "name": "",
+        "pin": "29",
+        "intype": "down",
+        "debounce": "200",
+        "read": true,
+        "x": 180,
+        "y": 640,
+        "wires": [
+            [
+                "3cba201.771e8e"
+            ]
+        ]
+    },
+    {
+        "id": "46f02e62.40bab",
+        "type": "http request",
+        "z": "df374cad.be25b",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "url": "https://6493976d-0b5e-4d5a-90c6-e3893adcc64a.us10.cp.iot.sap/iot/gateway/rest/measures/2befc75bdfc1ed5f",
+        "tls": "131e8518.acf41b",
+        "x": 690,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3cba201.771e8e",
+        "type": "function",
+        "z": "df374cad.be25b",
+        "name": "Switch 3",
+        "func": "node.warn(\"Switch3: \" + msg.payload)\nvalue = parseInt(msg.payload)\nmsg.headers = {}\nmsg.headers = {\"Content-Type\": \"application/json\"}\nmsg.payload = {}\nmsg.payload = { \n\t\"capabilityAlternateId\": \"80f2d91dd8909842\", \n\t\"sensorAlternateId\": \"c7ace84a7e8c9e57\", \n\t\"measures\": [{\"Switch3\": value}] \n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 500,
+        "y": 640,
+        "wires": [
+            [
+                "46f02e62.40bab"
+            ]
+        ]
+    },
+    {
+        "id": "f028b2d2.046e2",
+        "type": "function",
+        "z": "df374cad.be25b",
+        "name": "Trigger smart plug",
+        "func": "if (msg.payload === 0) {\n    msg.payload = false;\n} else if (msg.payload === 1) {\n    msg.payload = true;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 450,
+        "y": 400,
+        "wires": [
+            [
+                "398a6277.ef53ee"
+            ]
+        ]
+    },
+    {
+        "id": "398a6277.ef53ee",
+        "type": "smart-plug",
+        "z": "df374cad.be25b",
+        "name": "HS100(UK)",
+        "device": "192.168.43.195",
+        "interval": 10000,
+        "eventInterval": "2000",
+        "x": 830,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a1733ae1.e05ad8",
+        "type": "inject",
+        "z": "df374cad.be25b",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 180,
+        "y": 720,
+        "wires": [
+            [
+                "e657cfe7.b2b99"
+            ]
+        ]
+    },
+    {
+        "id": "e657cfe7.b2b99",
+        "type": "function",
+        "z": "df374cad.be25b",
+        "name": "Set Queue 4",
+        "func": "node.warn(\"Queue: \" + 4)\nmsg = {}\nmsg.headers = {}\nmsg.headers = {\"Content-Type\": \"application/json\"}\nmsg.payload = {}\nmsg.payload = { \n\t\"capabilityAlternateId\": \"22716f3ae9e2638c\",\n\t\"sensorAlternateId\": \"bf7cfeca16520c81\", \n\t\"measures\": [{\"number\": 4}] \n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 410,
+        "y": 720,
+        "wires": [
+            [
+                "df3eabf4.f82b78"
+            ]
+        ]
+    },
+    {
+        "id": "df3eabf4.f82b78",
+        "type": "http request",
+        "z": "df374cad.be25b",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "url": "https://6493976d-0b5e-4d5a-90c6-e3893adcc64a.us10.cp.iot.sap/iot/gateway/rest/measures/2befc75bdfc1ed5f",
+        "tls": "131e8518.acf41b",
+        "x": 610,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "35317f7b.04aa4",
+        "type": "inject",
+        "z": "df374cad.be25b",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 180,
+        "y": 780,
+        "wires": [
+            [
+                "855bc1e3.096e8"
+            ]
+        ]
+    },
+    {
+        "id": "855bc1e3.096e8",
+        "type": "function",
+        "z": "df374cad.be25b",
+        "name": "Set Queue 0",
+        "func": "node.warn(\"Queue: \" + 0)\nmsg = {}\nmsg.headers = {}\nmsg.headers = {\"Content-Type\": \"application/json\"}\nmsg.payload = {}\nmsg.payload = { \n\t\"capabilityAlternateId\": \"22716f3ae9e2638c\",\n\t\"sensorAlternateId\": \"bf7cfeca16520c81\", \n\t\"measures\": [{\"number\": 0}] \n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 410,
+        "y": 780,
+        "wires": [
+            [
+                "cc88f114.8cdb1"
+            ]
+        ]
+    },
+    {
+        "id": "cc88f114.8cdb1",
+        "type": "http request",
+        "z": "df374cad.be25b",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "url": "https://6493976d-0b5e-4d5a-90c6-e3893adcc64a.us10.cp.iot.sap/iot/gateway/rest/measures/2befc75bdfc1ed5f",
+        "tls": "131e8518.acf41b",
+        "x": 610,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7b261dd9.0e2e04",
+        "type": "inject",
+        "z": "df374cad.be25b",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 180,
+        "y": 40,
+        "wires": [
+            [
+                "33371bc4.54f934"
+            ]
+        ]
+    },
+    {
+        "id": "eb678350.8385f",
+        "type": "inject",
+        "z": "df374cad.be25b",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 180,
+        "y": 80,
+        "wires": [
+            [
+                "9730a22c.1de95"
+            ]
+        ]
+    },
+    {
+        "id": "33371bc4.54f934",
+        "type": "function",
+        "z": "df374cad.be25b",
+        "name": "Clean air",
+        "func": "\nmsg.headers = {}\nmsg.headers = {\"Content-Type\": \"application/json\"}\nmsg.payload = {}\nmsg.payload = { \n\t\"capabilityAlternateId\": \"6eee199751d481aa\", \n\t\"sensorAlternateId\": \"b0c6ccbb1ab49394\", \n\t\"measures\": [{\"QualityLevel\": 1}] \n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 380,
+        "y": 40,
+        "wires": [
+            [
+                "163c1be5.683c34"
+            ]
+        ]
+    },
+    {
+        "id": "9730a22c.1de95",
+        "type": "function",
+        "z": "df374cad.be25b",
+        "name": "Dirty air",
+        "func": "\nmsg.headers = {}\nmsg.headers = {\"Content-Type\": \"application/json\"}\nmsg.payload = {}\nmsg.payload = { \n\t\"capabilityAlternateId\": \"6eee199751d481aa\", \n\t\"sensorAlternateId\": \"b0c6ccbb1ab49394\", \n\t\"measures\": [{\"QualityLevel\": 0}] \n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 370,
+        "y": 80,
+        "wires": [
+            [
+                "163c1be5.683c34"
+            ]
+        ]
+    }
+]
