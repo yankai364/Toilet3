@@ -1,0 +1,5 @@
+service {
+	"toilet3.data::toilet3.WARNING" as "Warning";
+	"toilet3.data::toilet3.JANITOR" as "Janitor";
+	"toilet3.data::toilet3.TOILET" as "Toilet";
+} 

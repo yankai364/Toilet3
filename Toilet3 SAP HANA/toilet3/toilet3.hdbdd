@@ -1,0 +1,25 @@
+namespace toilet3.toilet3;
+
+@Schema: 'TOILET3'
+
+context toilet3 { 
+  
+	@Catalog.tableType: #COLUMN
+	entity WARNING {
+		key ID : Integer;
+		CapId : String(70);
+		Sensor: String(70);
+	};
+	@Catalog.tableType: #COLUMN
+	entity TOILET {
+		key ID : Integer;
+		Description : String(70);
+	};
+	@Catalog.tableType: #COLUMN
+	entity JANITOR {
+		key ID : Integer;
+		Name: String(50);  
+		Role : String(50);
+		Rating: Double;
+	};
+};	

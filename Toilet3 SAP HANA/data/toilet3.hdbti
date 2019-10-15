@@ -1,0 +1,20 @@
+import = [
+	{
+		table = "toilet3.data::toilet3.WARNING";
+		schema = "TOILET3";
+		file = "toilet3.toilet3:warning.csv";
+		header = false;
+	},
+	{
+		table = "toilet3.data::toilet3.TOILET";
+		schema = "TOILET3";
+		file = "toilet3.toilet3:toilet.csv";
+		header = false; 
+	},
+	{
+		table = "toilet3.data::toilet3.JANITOR";
+		schema = "TOILET3";
+		file = "toilet3.toilet3:janitor.csv";
+		header = false; 
+	}
+];
