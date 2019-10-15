@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+.soap {
+	position: absolute;
+	transform: translate(850%, 470%);
+}
+
+.toiletPaper {
+	position: absolute;
+	transform: translate(380%, 470%);
+}
+
+.wetFloor {
+	position: absolute;
+	transform: translate(550%, 750%);
+}
+
+.rubbishBin {
+	position: absolute;
+	transform: translate(660%, 1175%);
+}
+
+.odour {
+	position: absolute;
+	transform: translate(330%, 790%);
+}
+
+.male-dynamic {
+	position: absolute;
+	transform: translate(900%, 210%);
+}
+
+.male-1 {
+	position: absolute;
+	transform: translate(300%, 438%);
+}
+
+.male-2 {
+	position: absolute;
+	transform: translate(710%, 740%);
+}
+
+.female-dynamic {
+	position: absolute;
+	transform: translate(998%, 210%);
+}
+
+.female-1 {
+	position: absolute;
+	transform: translate(300%, 540%);
+}
+
+.female-2 {
+	position: absolute;
+	transform: translate(710%, 840%);
+}
+
+.hidden {
+	display: none;
+}
+
+.flashit{
+  color:#f2f;
+	-webkit-animation: flash linear 1s infinite;
+	animation: flash linear 1s infinite;
+}
+@-webkit-keyframes flash {
+	0% { opacity: 1; } 
+	50% { opacity: .1; } 
+	100% { opacity: 1; }
+}
+@keyframes flash {
+	0% { opacity: 1; } 
+	50% { opacity: .1; } 
+	100% { opacity: 1; }
+}
+/* Pulse class and keyframe animation */
+.pulseit{
+	-webkit-animation: pulse linear .5s infinite;
+	animation: pulse linear .5s infinite;
+}
+@-webkit-keyframes pulse {
+	0% { width:200px; } 
+	50% { width:340px; } 
+	100% { width:200px; }
+}
+@keyframes pulse {
+	0% { width:200px; } 
+	50% { width:340px; } 
+	100% { width:200px; }
+}
